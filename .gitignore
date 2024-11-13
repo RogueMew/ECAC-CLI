@@ -1,0 +1,4 @@
+
+*.txt
+/Ouput
+/Modules/__pycache__
