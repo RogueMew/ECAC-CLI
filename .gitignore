@@ -1,4 +1,4 @@
 
-*.txt
 /Ouput
 /Modules/__pycache__
+key.txt
