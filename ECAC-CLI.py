@@ -109,7 +109,8 @@ def valorant_stats(api_key_path:str, comp_id: int, team_stats: bool = False, pea
     if team_stats:
         if current_rank:
             VTS.scrape_current_team_average(ECAC.process_contact_info(ECAC.scrape_team_ids() if bracket_id is None else ECAC.scrape_team_ids_bracket(bracket_id)), ECAC.comp_details.read()["name"].replace(" ", "-")+"-current-team-average", output_folder)
-        else:
+        
+        if peak_rank:
             raise CustomError("Peak Rank is not Currently Supported")
     else:
         if current_rank:
